@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-windstone-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wind Stone's ESLint config for Vue.js projects",
   "main": "index.js",
   "scripts": {

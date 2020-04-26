@@ -3,6 +3,27 @@ module.exports = {
         "plugin:vue/recommended"
     ],
     rules: {
+        // 覆盖 ESLint 的规则
+        "no-console": "warn",
+        "no-unused-vars": "error",
+        "semi": "error",
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 2,
+                "maxEOF": 0,
+                "maxBOF": 0
+            }
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+
         // 覆盖 eslint-plugin-vue 配置的规则
         // "vue/comment-directive": "error", // 已包含在 eslint-plugin-vue 插件里
         // "vue/jsx-uses-vars": "error", // 已包含在 eslint-plugin-vue 插件里
@@ -91,15 +112,15 @@ module.exports = {
         "vue/v-on-function-call": "error",
         // "vue/v-slot-style": "error",
         // "vue/valid-v-slot": "error",
-        "overrides": [
-            {
-                "files": [
-                    "*.vue"
-                ],
-                "rules": {
-                    "indent": "off" // 特殊处理，详见 https://eslint.vuejs.org/rules/script-indent.html
-                }
+    },
+    overrides: [
+        {
+            "files": [
+                "*.vue"
+            ],
+            "rules": {
+                "indent": "off" // 特殊处理，详见 https://eslint.vuejs.org/rules/script-indent.html
             }
-        ]
-    }
+        }
+    ]
 }
